@@ -15,7 +15,7 @@ RUN apt-get update
 RUN apt-get install gcc libc6-dev git lrzsz -y
 
 #将go复制解压到容器中
-ADD go1.10.linux-amd64.tar.gz  /usr/local/
+#ADD go1.10.linux-amd64.tar.gz  /usr/local/
 
 # 定制环境变量
 ENV GOROOT=/usr/local/go                
@@ -24,7 +24,7 @@ ENV GOPATH=/root/go
 ENV PATH=$GOPATH/bin/:$PATH
 
 # 下载项目
-RUN go get github.com/nbsky3/helloworld01
+#RUN go get github.com/nbsky3/helloworld01
 
 # build
-RUN go build
+#RUN go build
